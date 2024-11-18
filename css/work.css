@@ -1,0 +1,129 @@
+/* Default navbar styles */
+.navbar {
+    /* background-color: #343a40; */
+    padding: 10px 0;
+}
+ul li{
+    list-style: none;
+}
+.navbar-dark .navbar-nav .nav-link {
+    /* color: #ffffff; */
+    font-size: 16px; /* Base font size */
+    padding: 8px 15px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Mobile responsive styles for 320px to 425px */
+@media (max-width: 425px) {
+    /* Collapse navbar and center align links */
+    .navbar-collapse {
+        justify-content: center;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 18px 0; /* Add vertical spacing between items */
+        margin-top: 200px;
+        background-color: red;
+        color: black;
+    }
+
+    /* Reduce padding and font size on very small screens (320px to 425px) */
+    .navbar-dark .navbar-nav .nav-link {
+        font-size: 14px; /* Slightly smaller font size for small screens */
+        padding: 6px 10px; /* Reduce padding for space optimization */
+    }
+
+    /* Modify navbar logo and container width on small screens */
+    .container-fluid {
+        padding: 0 15px; /* Padding on sides to prevent content from sticking to edges */
+    }
+
+    /* Hamburger menu (for navbar toggle) */
+    .navbar-toggler {
+        border-color: #007bff; /* Blue color for hamburger button */
+    }
+
+    .navbar-toggler-icon {
+        background-color: #007bff; /* Blue color for hamburger icon */
+    }
+
+    /* Change navbar background on mobile */
+   
+    /* Adjust navbar link hover state for better visibility */
+    .navbar-dark .navbar-nav .nav-link:hover {
+        color: #ffffff; /* Ensure links are visible on hover */
+        background-color: rgba(0, 123, 255, 0.2); /* Slightly darker background on hover */
+    }
+
+    /* Optional: If you have a brand/logo, scale it down for small screens */
+    .navbar-brand {
+        font-size: 18px; /* Smaller font size for brand */
+        padding: 0; /* Remove extra padding */
+    }
+}
+
+/* Extra small screens, below 320px */
+@media (max-width: 319px) {
+    .navbar-dark .navbar-nav .nav-link {
+        font-size: 12px; /* Reduce font size further for very small screens */
+        padding: 5px 8px; /* Further reduce padding */
+    }
+
+    /* Adjust navbar logo if applicable */
+    .navbar-brand {
+        font-size: 16px; /* Smaller brand logo for extremely small screens */
+    }
+}
+
+
+/* Responsive styling */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+        /* Center-align items on smaller screens */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+        /* Add margin between nav items on mobile */
+    }
+
+    .navbar-collapse {
+        justify-content: center;
+        /* Center the navbar on mobile */
+    }
+}
+
+/* Customize active state for anchor links */
+a[data-nav-section="home"]:hover,
+a[data-nav-section="about"]:hover,
+a[data-nav-section="services"]:hover,
+a[data-nav-section="skills"]:hover,
+a[data-nav-section="education"]:hover,
+a[data-nav-section="experience"]:hover,
+a[data-nav-section="certificates"]:hover,
+a[data-nav-section="contact"]:hover {
+    color: #007bff;
+    /* Highlight color for all anchor links on hover */
+}
+
+/* Optional: Adding a box shadow on scroll */
+.navbar.scrolled {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Box shadow when navbar is scrolled */
+}
